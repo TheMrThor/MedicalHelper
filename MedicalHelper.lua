@@ -4083,7 +4083,7 @@ function funCMD.lec(id)
 				wait(2000)
 				sampSendChat("Принимайте эти таблетки, и через некоторое время вам станет лучше")
 				wait(100)
-				sampSendChat("/heal "..id)
+				sampSendChat("/heal "..id.." 5000")
 			elseif isCharInModel(PLAYER_PED, 416) then
 				sampSendChat("Здравствуйте, что с Вами случилось?")
 				wait(2000)
@@ -4093,7 +4093,7 @@ function funCMD.lec(id)
 				wait(2000)
 				sampSendChat(chsex("/me протянул лекарство человеку", "/me протянула лекарство человеку"))
 				wait(100)
-				sampSendChat("/heal "..id)
+				sampSendChat("/heal "..id.." 5000")
 			end
 		end)
 	else
@@ -4733,7 +4733,7 @@ function funCMD.hall()
 			local pxp, pyp, pzp = getCharCoordinates(handle)
 			local distance = getDistanceBetweenCoords2d(px, py, pxp, pyp)
 			if distance <= 4 then
-				sampSendChat("/heal "..i)
+				sampSendChat("/heal "..i.." 5000")
 			end
 		end
 	end
@@ -4750,7 +4750,7 @@ function funCMD.dep()
 end
 function funCMD.hme()
 	local _, plId = sampGetPlayerIdByCharHandle(PLAYER_PED)
-	sampSendChat("/heal "..plId)
+	sampSendChat("/heal "..plId.." 5000")
 end
 function funCMD.memb()
 	sampSendChat("/members")
